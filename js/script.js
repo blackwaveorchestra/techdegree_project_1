@@ -43,13 +43,25 @@ var quotes = [
     source: "Claude Debussy."
   }
 ];
-console.log(quotes);
+
 
 
 
 /***
  * `getRandomQuote` function
 ***/
+
+function getRandomQuote() {
+  var randomNumber = Math.floor( Math.random() * 5 ) + 1;
+  return randomNumber;
+}
+
+
+var randomQuote;
+
+for (var i = 0; i < quotes.length; i += 1) {
+  randomQuote = quotes[i];
+}
 
 
 
