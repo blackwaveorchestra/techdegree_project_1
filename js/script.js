@@ -13,34 +13,34 @@ project 1 - A Random Quote Generator
 
 var quotes = [
   {
-    quote: “My alma mater was books, a good library. I could spend the rest of
-    my life reading, just satisfying my curiosity.",
-    source: "Malcolm X.",
-    citation: "The Autobiography of Malcolm X.",
+    quote: 'My alma mater was books, a good library. I could spend the rest of
+    my life reading, just satisfying my curiosity.',
+    source: 'Malcolm X.',
+    citation: 'The Autobiography of Malcolm X.',
     year: 1964
   },
   {
-    quote: "There was so much to grok, so little to grok from.",
-    source: "Robert Heinlein.",
-    citation: "Stranger in a Strange Land.", 
+    quote: 'There was so much to grok, so little to grok from.',
+    source: 'Robert Heinlein.',
+    citation: 'Stranger in a Strange Land.', 
     year: 1961
   },
   {
-    quote: "To give a person an opinion one must first judge well whether that
-    person is of the disposition to recieve it or not.",
-    source: "Yamamoto Tsunetomo.", 
-    citation: "Hagakure: Book of the Samurai."
+    quote: 'To give a person an opinion one must first judge well whether that
+    person is of the disposition to recieve it or not.',
+    source: 'Yamamoto Tsunetomo.', 
+    citation: 'Hagakure: Book of the Samurai.'
   },
   {
-    quote: "I once thought I had mono for an entire year, it turned out I was
-    just really bored.",
-    source: "Wayne Campbell", 
-    citation: "Waynes World",
+    quote: 'I once thought I had mono for an entire year, it turned out I was
+    just really bored.',
+    source: 'Wayne Campbell', 
+    citation: 'Waynes World',
     year: 1992
   },
   {
-    quote: "Works of art make rules; rules do not make works of art.",
-    source: "Claude Debussy."
+    quote: 'Works of art make rules; rules do not make works of art.',
+    source: 'Claude Debussy.'
   }
 ];
 
@@ -52,15 +52,15 @@ var quotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() * 5 ) + 1;
-  return randomNumber;
+  var randomNumber = Math.floor( Math.random() * 5 );
+  return quote[randomNumber];
 }
 
 
 var randomQuote;
 
 for (var i = 0; i < quotes.length; i += 1) {
-  randomQuote = quotes[i];
+  randomQuote = quotes[0];
 }
 
 
