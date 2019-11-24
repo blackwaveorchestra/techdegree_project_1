@@ -13,8 +13,7 @@ project 1 - A Random Quote Generator
 
 var quotes = [
   {
-    quote: 'My alma mater was books, a good library. I could spend the rest of
-    my life reading, just satisfying my curiosity.',
+    quote: 'My alma mater was books, a good library. I could spend the rest of my life reading, just satisfying my curiosity.',
     source: 'Malcolm X.',
     citation: 'The Autobiography of Malcolm X.',
     year: 1964
@@ -26,14 +25,12 @@ var quotes = [
     year: 1961
   },
   {
-    quote: 'To give a person an opinion one must first judge well whether that
-    person is of the disposition to recieve it or not.',
+    quote: 'To give a person an opinion one must first judge well whether that person is of the disposition to recieve it or not.',
     source: 'Yamamoto Tsunetomo.', 
     citation: 'Hagakure: Book of the Samurai.'
   },
   {
-    quote: 'I once thought I had mono for an entire year, it turned out I was
-    just really bored.',
+    quote: 'I once thought I had mono for an entire year, it turned out I was just really bored.',
     source: 'Wayne Campbell', 
     citation: 'Waynes World',
     year: 1992
@@ -52,7 +49,7 @@ var quotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() * 5 );
+  var randomNumber = Math.floor( Math.random() * 5 ) + quotes.length;
   return quote[randomNumber];
 }
 
@@ -69,7 +66,9 @@ for (var i = 0; i < quotes.length; i += 1) {
  * `printQuote` function
 ***/
 
+function printQuote() {
 
+}
 
 /***
  * click event listener for the print quote button
