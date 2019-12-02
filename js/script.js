@@ -67,13 +67,27 @@ for (var i = 0; i < quotes.length; i += 1) {
 ***/
 
 function printQuote(get_quote) {
-  var div = document.getElementById('output');
-  div.innerHTML = get_quote;
-  var get_quote = getRandomQuote;
-  
+  var get_quote = getRandomQuote();
+  var info = ' ';
+
+  get_quote = <p class="quote"> [quote here] </p>
+  <p class="source"> [source here] 
+  if (get_quote === ' '){
+    return true;
+  } else {
+    return false;
+  } 
+  if (get_quote === false) 
+  <span class="citation"> [citation here] </span>
+    <span class="year"> [year here]</span>
+  </p>
+
+
+
 }
 
-var get_quote = quotes.length;
+
+  
 
 
 
