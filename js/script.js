@@ -66,9 +66,17 @@ for (var i = 0; i < quotes.length; i += 1) {
  * `printQuote` function
 ***/
 
-function printQuote() {
-
+function printQuote(get_quote) {
+  var div = document.getElementById('output');
+  div.innerHTML = get_quote;
+  var get_quote = getRandomQuote;
+  
 }
+
+var get_quote = quotes.length;
+
+
+
 
 /***
  * click event listener for the print quote button
