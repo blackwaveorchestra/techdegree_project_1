@@ -50,16 +50,16 @@ var quotes = [
 
 function getRandomQuote() {
   var randomNumber = Math.floor( Math.random() ) + quotes.length;
-  var full_quotes = quotes;
   return quote[randomNumber];
 }
-
+console.log( getRandomQuote() );
 
 var randomQuote;
 
 for (var i = 0; i < quotes.length; i += 1) {
   randomQuote = quotes[0];
 }
+
 
 
 
