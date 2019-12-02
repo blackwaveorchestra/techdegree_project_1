@@ -68,17 +68,17 @@ for (var i = 0; i < quotes.length; i += 1) {
 ***/
 
 function printQuote(get_quote) {
-  var get_quote = getRandomQuote();
+  var randomQuote = getRandomQuote();
   var info = ' ';
 
-  get_quote = <p class="quote"> [quote here] </p>
+  randomQuote = <p class="quote"> [quote here] </p>
   <p class="source"> [source here] 
-  if (get_quote === ' '){
+  if (randomQuote === ' '){
     return true;
   } else {
     return false;
   } 
-  if (get_quote === false) 
+  if (randomQuote === false) 
   <span class="citation"> [citation here] </span>
     <span class="year"> [year here]</span>
   </p>
