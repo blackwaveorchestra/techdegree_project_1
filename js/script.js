@@ -49,16 +49,14 @@ var quotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() ) + quotes.length;
-  return quote[randomNumber];
+  var randomNumber = Math.floor( Math.random() );
+  return quotes[randomNumber];
 }
 console.log( getRandomQuote() );
 
-var randomQuote;
 
-for (var i = 0; i < quotes.length; i += 1) {
-  randomQuote = quotes[0];
-}
+
+
 
 
 
@@ -67,25 +65,11 @@ for (var i = 0; i < quotes.length; i += 1) {
  * `printQuote` function
 ***/
 
-function printQuote(get_quote) {
-  var randomQuote = getRandomQuote();
-  var info = ' ';
-
-  randomQuote = <p class="quote"> [quote here] </p>
-  <p class="source"> [source here] 
-  if (randomQuote === ' '){
-    return true;
-  } else {
-    return false;
-  } 
-  if (randomQuote === false) 
-  <span class="citation"> [citation here] </span>
-    <span class="year"> [year here]</span>
-  </p>
 
 
 
-}
+
+
 
 
   
