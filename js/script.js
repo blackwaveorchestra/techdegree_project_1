@@ -49,7 +49,7 @@ var quotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() );
+  var randomNumber = Math.floor( Math.random() * quotes.length );
   return quotes[randomNumber];
 }
 console.log( getRandomQuote() );
@@ -65,6 +65,20 @@ console.log( getRandomQuote() );
  * `printQuote` function
 ***/
 
+function printQuote() {
+  var pullQuote = getRandomQuote();
+  var HTML = '';
+  HTML += <p class="quote"> [pullQuote.quote]</p>;
+  HTML += <p class="source"> [pullQuote.source];
+  if (pullQuote.citation === true) {
+        HTML +=  <span class="citation"> [pullQuote.citation] </span>
+  } if (pullQuote.year === true) {
+        HTML += <span class="year"> [pullQuote.year] </span>
+        </p>
+  }
+}
+
+console.log( printQuote() );
 
 
 
