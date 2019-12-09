@@ -68,13 +68,13 @@ console.log( getRandomQuote() );
 function printQuote() {
   var pullQuote = getRandomQuote();
   var HTML = '';
-  HTML += <p class="quote"> [pullQuote.quote]</p>;
-  HTML += <p class="source"> [pullQuote.source];
-  if (pullQuote.citation === true) {
-        HTML +=  <span class="citation"> [pullQuote.citation] </span>
-  } if (pullQuote.year === true) {
-        HTML += <span class="year"> [pullQuote.year] </span>
-        </p>
+  HTML += "<p class="quote">" + [pullQuote.quote] + "</p>";
+  HTML += "<p class="source">"  + [pullQuote.source];
+  if (pullQuote.citation) {
+        HTML +=  "<span class="citation">" + [pullQuote.citation] + "</span>"
+  } if (pullQuote.year) {
+        HTML += "<span class="year">" + [pullQuote.year] + "</span>"
+        "</p>"
   }
 }
 
