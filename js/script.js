@@ -68,6 +68,7 @@ function getRandomQuote() {
 function printQuote() {
   var pullQuote = getRandomQuote();
   var HTML = '';
+  document.getElementById('quote-box').innerHTML = HTML;
   HTML += '<p class="quote">' + [pullQuote.quote] + '</p>';
   HTML += '<p class="source">'  + [pullQuote.source];
   if (pullQuote.citation) {
