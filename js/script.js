@@ -52,7 +52,7 @@ function getRandomQuote() {
   var randomNumber = Math.floor( Math.random() * quotes.length );
   return quotes[randomNumber];
 }
-console.log( getRandomQuote() );
+
 
 
 
@@ -68,13 +68,12 @@ console.log( getRandomQuote() );
 function printQuote() {
   var pullQuote = getRandomQuote();
   var HTML = '';
-  HTML += "<p class="quote">" + [pullQuote.quote] + "</p>";
-  HTML += "<p class="source">"  + [pullQuote.source];
+  HTML += '<p class="quote">' + [pullQuote.quote] + '</p>';
+  HTML += '<p class="source">'  + [pullQuote.source];
   if (pullQuote.citation) {
-        HTML +=  "<span class="citation">" + [pullQuote.citation] + "</span>"
+        HTML +=  '<span class="citation">' + [pullQuote.citation] + '</span>';
   } if (pullQuote.year) {
-        HTML += "<span class="year">" + [pullQuote.year] + "</span>"
-        "</p>"
+        HTML += '<span class="year">' + [pullQuote.year] + '</span>' + '</p>';
   }
 }
 
