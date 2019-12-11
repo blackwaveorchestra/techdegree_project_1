@@ -68,17 +68,20 @@ function getRandomQuote() {
 function printQuote() {
   var pullQuote = getRandomQuote();
   var HTML = '';
-  document.getElementById('quote-box').innerHTML = HTML;
   HTML += '<p class="quote">' + [pullQuote.quote] + '</p>';
   HTML += '<p class="source">'  + [pullQuote.source];
   if (pullQuote.citation) {
         HTML +=  '<span class="citation">' + [pullQuote.citation] + '</span>';
   } if (pullQuote.year) {
-        HTML += '<span class="year">' + [pullQuote.year] + '</span>' + '</p>';
+        HTML += '<span class="year">' + [pullQuote.year] + '</span>' 
+        '</p>';
+        document.getElementById('quote-box').innerHTML = HTML;
+  } else {
+    return pullQuote;
   }
 }
 
-console.log( printQuote() );
+
 
 
 
