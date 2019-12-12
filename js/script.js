@@ -111,10 +111,10 @@ window.setInterval (printQuote, 5000);
  */
 
 function randomRGB() {
-  var red = return Math.floor(Math.random() * 256 );
-  var green = return Math.floor(Math.random() * 256 );
-  var blue = return Math.floor(Math.random() * 256 );
-  var backgroundColors = red + green + blue;
+  var red = Math.floor(Math.random() * 256 );
+  var green = Math.floor(Math.random() * 256 );
+  var blue = Math.floor(Math.random() * 256 );
+  var backgroundColors = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
   document.body.style.background = backgroundColors;
 }
