@@ -19,6 +19,31 @@ var quotes = [
     year: 1964
   },
   {
+    quote: 'Wisdom cannot be imparted. Wisdom that a wise man attempts to impart always sounds like foolishness to someone else ... Knowledge can be communicated, but not wisdom.',
+    source: 'Hermann Hesse.',
+    citation: 'Siddhartha.',
+    year: 1951
+  },
+  {
+    quote: 'The Nephilim were on the earth in those days—and also afterward—when the sons of God went in to the daughters of humans, who bore children to them. These were the heroes that were of old, warriors of renown.',
+    source: 'The Old Testament.',
+    citation: 'Genesis chapter 6, verses 1 through 4.'
+  },
+  {
+    quote: 'Sergeant Butterman, the little hand says it\'s time to rock n roll.',
+    source: 'Nicholas Angel.',
+    citation: 'Hot Fuzz.',
+    year: 2007
+  },
+  {
+    quote: 'I cannot sleep unless I am surrounded by books.',
+    source: 'Jorge Luis Borges.'
+  },
+  {
+    quote: 'Per aspera, ad astra.',
+    source: 'Popular Latin Phrase.'
+  },
+  {
     quote: 'There was so much to grok, so little to grok from.',
     source: 'Robert Heinlein.',
     citation: 'Stranger in a Strange Land.', 
@@ -31,8 +56,8 @@ var quotes = [
   },
   {
     quote: 'I once thought I had mono for an entire year, it turned out I was just really bored.',
-    source: 'Wayne Campbell', 
-    citation: 'Waynes World',
+    source: 'Wayne Campbell.', 
+    citation: 'Waynes World.',
     year: 1992
   },
   {
@@ -75,15 +100,13 @@ function printQuote() {
   } if (pullQuote.year) {
         HTML += '<span class="year">' + [pullQuote.year] + '</span>' 
         '</p>';
-        document.getElementById('quote-box').innerHTML = HTML;
-  } else {
-    return pullQuote;
-  }
+  } 
+  document.getElementById('quote-box').innerHTML = HTML;
 }
 
 
 
-
+printQuote();
 
 
 
