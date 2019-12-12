@@ -106,6 +106,9 @@ printQuote();
  */
 window.setInterval (printQuote, 5000);
 
+/***
+ * Trying to create a way for the browser to change background colors with each 'printQuote' refresh.
+ */
 
 function randomRGB() {
   var red = return Math.floor(Math.random() * 256 );
