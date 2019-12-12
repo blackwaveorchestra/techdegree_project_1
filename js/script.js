@@ -3,66 +3,65 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
+
+
 
 /*** 
- * `quotes` array 
+ * `quotes` array, containing 10 quotes that I chose for the project.  
 ***/
 
 var quotes = [
   {
     quote: 'My alma mater was books, a good library. I could spend the rest of my life reading, just satisfying my curiosity.',
-    source: 'Malcolm X.',
-    citation: 'The Autobiography of Malcolm X.',
+    source: 'Malcolm X',
+    citation: 'The Autobiography of Malcolm X',
     year: 1964
   },
   {
     quote: 'Wisdom cannot be imparted. Wisdom that a wise man attempts to impart always sounds like foolishness to someone else ... Knowledge can be communicated, but not wisdom.',
-    source: 'Hermann Hesse.',
-    citation: 'Siddhartha.',
+    source: 'Hermann Hesse',
+    citation: 'Siddhartha',
     year: 1951
   },
   {
     quote: 'The Nephilim were on the earth in those days—and also afterward—when the sons of God went in to the daughters of humans, who bore children to them. These were the heroes that were of old, warriors of renown.',
-    source: 'The Old Testament.',
-    citation: 'Genesis chapter 6, verses 1 through 4.'
+    source: 'The Old Testament',
+    citation: 'Genesis chapter 6, verses 1 through 4'
   },
   {
     quote: 'Sergeant Butterman, the little hand says it\'s time to rock n roll.',
-    source: 'Nicholas Angel.',
-    citation: 'Hot Fuzz.',
+    source: 'Nicholas Angel',
+    citation: 'Hot Fuzz',
     year: 2007
   },
   {
     quote: 'I cannot sleep unless I am surrounded by books.',
-    source: 'Jorge Luis Borges.'
+    source: 'Jorge Luis Borges'
   },
   {
     quote: 'Per aspera, ad astra.',
-    source: 'Popular Latin Phrase.'
+    source: 'Popular Latin Phrase'
   },
   {
     quote: 'There was so much to grok, so little to grok from.',
-    source: 'Robert Heinlein.',
-    citation: 'Stranger in a Strange Land.', 
+    source: 'Robert Heinlein',
+    citation: 'Stranger in a Strange Land', 
     year: 1961
   },
   {
     quote: 'To give a person an opinion one must first judge well whether that person is of the disposition to recieve it or not.',
-    source: 'Yamamoto Tsunetomo.', 
-    citation: 'Hagakure: Book of the Samurai.'
+    source: 'Yamamoto Tsunetomo', 
+    citation: 'Hagakure: Book of the Samurai'
   },
   {
     quote: 'I once thought I had mono for an entire year, it turned out I was just really bored.',
-    source: 'Wayne Campbell.', 
-    citation: 'Waynes World.',
+    source: 'Wayne Campbell', 
+    citation: 'Waynes World',
     year: 1992
   },
   {
     quote: 'Works of art make rules; rules do not make works of art.',
-    source: 'Claude Debussy.'
+    source: 'Claude Debussy'
   }
 ];
 
@@ -70,7 +69,7 @@ var quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function that I generates quote at random from the array above.
 ***/
 
 function getRandomQuote() {
@@ -79,15 +78,8 @@ function getRandomQuote() {
 }
 
 
-
-
-
-
-
-
-
 /***
- * `printQuote` function
+ * `printQuote` function pushes this quote to the web browser.  Uses the random number to pull a quote (at random) and prints it. 
 ***/
 
 function printQuote() {
@@ -104,12 +96,27 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = HTML;
 }
 
-
-
+/***
+ * calling the printQuote function below.
+ */
 printQuote();
 
+/***
+ * setting the browser to refresh every 5 seconds, which will allow quotes to cycle automatically if the user doesn't click the select quote button. 
+ */
+window.setInterval (printQuote, 5000);
 
 
+function randomRGB() {
+  var red = return Math.floor(Math.random() * 256 );
+  var green = return Math.floor(Math.random() * 256 );
+  var blue = return Math.floor(Math.random() * 256 );
+  var backgroundColors = red + green + blue;
+
+  document.body.style.background = backgroundColors;
+}
+
+randomRGB();
 
 
   
