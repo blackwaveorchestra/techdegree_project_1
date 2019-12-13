@@ -93,6 +93,10 @@ function printQuote() {
         HTML += '<span class="year">' + [pullQuote.year] + '</span>' 
         '</p>';
   } 
+  function myStopFunction(){
+    clearInterval (timer);
+  }
+  timer = window.setInterval (printQuote, 5000);
   document.getElementById('quote-box').innerHTML = HTML;
   randomRGB();
   clearInterval();
@@ -101,6 +105,8 @@ function printQuote() {
 /***
  * calling the printQuote function below.
  */
+
+var timer = window.setInterval (printQuote, 5000);
 printQuote();
 
 /***
@@ -109,13 +115,13 @@ printQuote();
  * click on the 'show-another-quote' button.
  */
 
-function myTimer() {
-  var timer = window.setInterval (printQuote, 5000);
-}
+
+
+
 
 myTimer();
 
-function stopColor(){
+function myStopFunction(){
   clearInterval (timer);
 }
 
