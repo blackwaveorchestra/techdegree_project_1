@@ -94,6 +94,8 @@ function printQuote() {
         '</p>';
   } 
   document.getElementById('quote-box').innerHTML = HTML;
+  randomRGB();
+  clearInterval();
 }
 
 /***
@@ -102,9 +104,20 @@ function printQuote() {
 printQuote();
 
 /***
- * setting the browser to refresh every 5 seconds, which will allow quotes to cycle automatically if the user doesn't click the select quote button. 
+ * setting the browser to refresh every 5 seconds, which will allow quotes to cycle automatically if the user doesn't click the 
+ * select quote button. also, set up 2 functions: one to 'set the timer', and the other to 'clear the timer' in case someone DOES 
+ * click on the 'show-another-quote' button.
  */
-window.setInterval (printQuote, 5000);
+
+function myTimer() {
+  var timer = window.setInterval (printQuote, 5000);
+}
+
+myTimer();
+
+function stopColor(){
+  clearInterval (timer);
+}
 
 /***
  * Trying to create a way for the browser to change background colors with each 'printQuote' refresh.
@@ -119,7 +132,7 @@ function randomRGB() {
   document.body.style.background = backgroundColors;
 }
 
-randomRGB();
+
 
 
   
