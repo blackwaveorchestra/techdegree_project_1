@@ -80,6 +80,9 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function pushes this quote to the web browser.  Uses the random number to pull a quote (at random) and prints it. 
+ * clearInterval function should STOP/RESET the automatic timer.
+ * calling randomRGB function within printQuote-function
+ * attaching the getElementID for HTML within this function, as well.
 ***/
 
 function printQuote() {
@@ -96,14 +99,14 @@ function printQuote() {
   function myStopFunction(){
     clearInterval (timer);
   }
-  timer = window.setInterval (printQuote, 5000);
   document.getElementById('quote-box').innerHTML = HTML;
   randomRGB();
   clearInterval();
 }
 
 /***
- * calling the printQuote function below.
+ * calling the printQuote function below. 
+ * created variable for timer.
  */
 
 var timer = window.setInterval (printQuote, 5000);
@@ -119,11 +122,9 @@ printQuote();
 
 
 
-myTimer();
 
-function myStopFunction(){
-  clearInterval (timer);
-}
+
+
 
 /***
  * Trying to create a way for the browser to change background colors with each 'printQuote' refresh.
