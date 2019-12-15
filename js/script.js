@@ -96,12 +96,10 @@ function printQuote() {
         HTML += '<span class="year">' + [pullQuote.year] + '</span>' 
         '</p>';
   } 
-  function myStopFunction(){
-    clearInterval (timer);
-  }
   document.getElementById('quote-box').innerHTML = HTML;
   randomRGB();
-  clearInterval();
+  myStopFunction();
+  window.setInterval(printQuote, 5000);
 }
 
 /***
@@ -109,16 +107,20 @@ function printQuote() {
  * created variable for timer.
  */
 
-var timer = window.setInterval (printQuote, 5000);
+/***
+ * var timer = window.setInterval (printQuote, 5000); (removed the variable for setting the window interval).
+ */
+
 printQuote();
 
 /***
- * setting the browser to refresh every 5 seconds, which will allow quotes to cycle automatically if the user doesn't click the 
- * select quote button. also, set up 2 functions: one to 'set the timer', and the other to 'clear the timer' in case someone DOES 
- * click on the 'show-another-quote' button.
+ * created function to clear the interval of the timer.  will CALL function inside of 'printQuote function (ABOVE, starting around
+ * line 88)'.
  */
 
-
+function myStopFunction(){
+  clearInterval (timer);
+}
 
 
 
