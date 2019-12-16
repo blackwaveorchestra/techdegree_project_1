@@ -7,7 +7,7 @@ project 1 - A Random Quote Generator
 
 
 /*** 
- * `quotes` array, containing 10 quotes that I chose for the project.  
+ * `quotes` array, containing 10 quotes that I chose for this project.  
 ***/
 
 var quotes = [
@@ -69,7 +69,7 @@ var quotes = [
 
 
 /***
- * `getRandomQuote` function that I generates quote at random from the array above.
+ * `getRandomQuote` function: enerates quote at random from the array above.
 ***/
 
 function getRandomQuote() {
@@ -79,10 +79,10 @@ function getRandomQuote() {
 
 
 /***
- * `printQuote` function pushes this quote to the web browser.  Uses the random number to pull a quote (at random) and prints it. 
+ * `printQuote` function pushes this quote to the web browser.  Uses the random number to pull a quote. 
  * clearInterval function should STOP/RESET the automatic timer.
- * calling randomRGB function within printQuote-function
- * attaching the getElementID for HTML within this function, as well.
+ * calling randomRGB function within printQuote-function (background color effect)
+ * attaching the getElementID for HTML within this function, as well as setting the timer within the function.
 ***/
 
 function printQuote() {
@@ -99,23 +99,21 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = HTML;
   randomRGB();
   myStopFunction();
-  window.setInterval(printQuote, 5000);
+  timer = window.setInterval(printQuote, 5000);
 }
 
 /***
- * calling the printQuote function below. 
- * created variable for timer.
+ * calling the printQuote function. 
+ * created variable for timer, global scope (another timer is written within printQuote function).
  */
 
-/***
- * var timer = window.setInterval (printQuote, 5000); (removed the variable for setting the window interval).
- */
+var timer = window.setInterval (printQuote, 5000);
 
 printQuote();
 
 /***
  * created function to clear the interval of the timer.  will CALL function inside of 'printQuote function (ABOVE, starting around
- * line 88)'.
+ * line 100)'.
  */
 
 function myStopFunction(){
@@ -130,6 +128,7 @@ function myStopFunction(){
 
 /***
  * Trying to create a way for the browser to change background colors with each 'printQuote' refresh.
+ * as of (project turn-in-time), this function seems to be working on multiple browsers.  function is CALLED inside of the printQuote funtion.
  */
 
 function randomRGB() {
