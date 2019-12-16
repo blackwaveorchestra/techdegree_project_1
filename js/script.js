@@ -69,7 +69,7 @@ var quotes = [
 
 
 /***
- * `getRandomQuote` function: enerates quote at random from the array above.
+ * `getRandomQuote` function: generates quote at random from the array above.
 ***/
 
 function getRandomQuote() {
